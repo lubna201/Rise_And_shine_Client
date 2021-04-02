@@ -7,7 +7,7 @@ const Manage = ({ product }) => {
     const [state,setState]=useState();
     const deleteEvent = id => {
         console.log('remove clicked', id);
-        const url = `http://localhost:4000/deleteProduct/${id}`;
+        const url = `https://obscure-headland-73829.herokuapp.com/deleteProduct/${id}`;
         fetch(url, {
             method: 'DELETE',
         })

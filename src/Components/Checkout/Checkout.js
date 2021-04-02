@@ -5,7 +5,7 @@ const Checkout = () => {
     const [checkout,setCheckout]=useState([]);
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     useEffect(()=>{
-        fetch('http://localhost:4000/lastCheckout/'+ loggedInUser.email)
+        fetch('https://obscure-headland-73829.herokuapp.com/lastCheckout/'+ loggedInUser.email)
         .then(res=>res.json())
         .then(data=>setCheckout(data));
     },[])

@@ -15,7 +15,7 @@ const BuyNow = () => {
     const [data, setData] = useState({})
 
     useEffect(() => {
-        fetch(`http://localhost:4000/products/${_id}`)
+        fetch(`https://obscure-headland-73829.herokuapp.com/products/${_id}`)
             .then(res => res.json())
             .then(data => setData(data))
     }, [])
@@ -25,7 +25,7 @@ const BuyNow = () => {
 
     const handleBooking = () => {
         const newBooking = { ...loggedInUser, ...data };
-        fetch('http://localhost:4000/checkout', {
+        fetch('https://obscure-headland-73829.herokuapp.com/checkout', {
             method: 'POST',
             headers: { 'Content-type': 'application/json' },
             body: JSON.stringify(newBooking)
